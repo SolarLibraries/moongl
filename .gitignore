@@ -13,3 +13,7 @@ examples/glslcookbook/01-getting-started/*.bin
 examples/glslcookbook/cache/*-*
 examples/learnopengl/resources/*
 !examples/learnopengl/resources/README
+/luarocks
+/lua
+/lua_modules
+/.luarocks
