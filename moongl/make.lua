@@ -29,6 +29,7 @@
 
 do
 local gl = moongl -- require("moongl")
+local unpack = table.unpack or unpack
 
 local function shader_sourcef(id, filename)
    local file, errmsg = io.open(filename, "r")
@@ -59,7 +60,7 @@ local function make_program_(shader_source_func, ...)
       shader[#shader + 1] = id
    end
    gl.link_program(prog, true)
-   return prog, table.unpack(shader)
+   return prog, unpack(shader)
 end
 
 local function make_program_s(...) -- gets shader sources from strings
